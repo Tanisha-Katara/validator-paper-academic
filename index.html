@@ -165,24 +165,55 @@
 
         /* Figures */
         .figure-placeholder {
-            background-color: #f0f0f0;
-            border: 2px dashed #999;
-            padding: 60px 20px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+            border: 3px dashed #666;
+            padding: 40px 30px;
+            margin: 30px 0;
             text-align: center;
             page-break-inside: avoid;
             column-span: all;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .figure-placeholder::before {
+            content: '[DATA VISUALIZATION PLACEHOLDER]';
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .figure-placeholder .figure-title {
-            font-weight: 600;
-            font-size: 13px;
-            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #000;
         }
 
         .figure-placeholder .figure-description {
             font-size: 12px;
-            color: #555;
+            color: #444;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .figure-placeholder .visualization-area {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            height: 300px;
+            margin: 20px auto;
+            max-width: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 13px;
             font-style: italic;
         }
 
@@ -485,21 +516,30 @@
     <!-- Figures 1-3 Placeholders -->
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 1: Lorenz Curve - Celestia Validator Reward Distribution</div>
+        <div class="visualization-area">
+            [Lorenz Curve Visualization]
+        </div>
         <div class="figure-description">Lorenz curve showing cumulative percentage of validators (x-axis) versus cumulative percentage of rewards earned (y-axis). Curve significantly bows below the line of perfect equality, indicating high concentration.</div>
-        <figcaption>Figure 1: Lorenz curve analysis demonstrates substantial departure from equality in Celestia's validator reward distribution.</figcaption>
     </figure>
+    <figcaption>Figure 1: Lorenz curve analysis demonstrates substantial departure from equality in Celestia's validator reward distribution.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 2: Pareto Chart - Celestia Top Validators by Reward Share</div>
+        <div class="visualization-area">
+            [Pareto Chart Visualization]
+        </div>
         <div class="figure-description">Bar chart showing individual validator reward shares in descending order, with cumulative percentage line overlay. Top 20 validators account for majority of network rewards.</div>
-        <figcaption>Figure 2: Pareto analysis reveals heavy concentration among Celestia's top-performing validators.</figcaption>
     </figure>
+    <figcaption>Figure 2: Pareto analysis reveals heavy concentration among Celestia's top-performing validators.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 3: Quintile Transition Matrix - Celestia Validator Mobility</div>
+        <div class="visualization-area">
+            [Transition Matrix Visualization]
+        </div>
         <div class="figure-description">5x5 matrix showing probability of validators moving between quintiles (Q1=bottom 20%, Q5=top 20%). Strong diagonal values indicate limited mobility.</div>
-        <figcaption>Figure 3: Transition matrix demonstrates high persistence within quintiles and limited upward mobility for bottom-tier validators.</figcaption>
     </figure>
+    <figcaption>Figure 3: Transition matrix demonstrates high persistence within quintiles and limited upward mobility for bottom-tier validators.</figcaption>
 
     <article class="two-column">
         <p>
@@ -558,21 +598,30 @@
     <!-- Figures 4-6 Placeholders -->
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 4: Lorenz Curve - Polygon Validator Reward Distribution</div>
+        <div class="visualization-area">
+            [Lorenz Curve Visualization]
+        </div>
         <div class="figure-description">Lorenz curve for Polygon validators showing even greater departure from equality than Celestia. Mature network demonstrates entrenched concentration patterns.</div>
-        <figcaption>Figure 4: Polygon's Lorenz curve reflects high inequality consistent with network maturity and established validator hierarchies.</figcaption>
     </figure>
+    <figcaption>Figure 4: Polygon's Lorenz curve reflects high inequality consistent with network maturity and established validator hierarchies.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 5: Pareto Chart - Polygon Top Validators by Reward Share</div>
+        <div class="visualization-area">
+            [Pareto Chart Visualization]
+        </div>
         <div class="figure-description">Pareto analysis showing steep concentration curve. Top 10 validators account for disproportionate share of network rewards.</div>
-        <figcaption>Figure 5: Polygon validator rewards follow a highly skewed Pareto distribution favoring established players.</figcaption>
     </figure>
+    <figcaption>Figure 5: Polygon validator rewards follow a highly skewed Pareto distribution favoring established players.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 6: Quintile Transition Matrix - Polygon Validator Mobility</div>
+        <div class="visualization-area">
+            [Transition Matrix Visualization]
+        </div>
         <div class="figure-description">Transition matrix demonstrating limited mobility and strong quintile persistence, particularly at the extremes (Q1 and Q5).</div>
-        <figcaption>Figure 6: Polygon validators exhibit low mobility across reward quintiles, indicating structural barriers to advancement.</figcaption>
     </figure>
+    <figcaption>Figure 6: Polygon validators exhibit low mobility across reward quintiles, indicating structural barriers to advancement.</figcaption>
 
     <article class="two-column">
         <p>
@@ -627,21 +676,30 @@
     <!-- Figures 7-9 Placeholders -->
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 7: Lorenz Curve - Cronos Validator Reward Distribution</div>
+        <div class="visualization-area">
+            [Lorenz Curve Visualization]
+        </div>
         <div class="figure-description">Lorenz curve for Cronos' 25-validator set. Limited validator slots create moderate but persistent inequality.</div>
-        <figcaption>Figure 7: Cronos Lorenz curve reflects constrained validator set dynamics with concentration among top performers.</figcaption>
     </figure>
+    <figcaption>Figure 7: Cronos Lorenz curve reflects constrained validator set dynamics with concentration among top performers.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 8: Pareto Chart - Cronos Validators by Reward Share</div>
+        <div class="visualization-area">
+            [Pareto Chart Visualization]
+        </div>
         <div class="figure-description">Pareto chart of all 25 Cronos validators showing distribution across the limited active set.</div>
-        <figcaption>Figure 8: Cronos validator rewards demonstrate concentration effects even within a small, permissioned set.</figcaption>
     </figure>
+    <figcaption>Figure 8: Cronos validator rewards demonstrate concentration effects even within a small, permissioned set.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 9: Quintile Transition Matrix - Cronos Validator Mobility</div>
+        <div class="visualization-area">
+            [Transition Matrix Visualization]
+        </div>
         <div class="figure-description">Transition matrix for Cronos validators showing mobility patterns within the 25-validator active set.</div>
-        <figcaption>Figure 9: Limited validator slots in Cronos create distinct mobility patterns compared to larger validator sets.</figcaption>
     </figure>
+    <figcaption>Figure 9: Limited validator slots in Cronos create distinct mobility patterns compared to larger validator sets.</figcaption>
 
     <article class="two-column">
         <p>
@@ -700,21 +758,30 @@
     <!-- Figures 10-12 Placeholders -->
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 10: Lorenz Curve - Dymension Validator Reward Distribution</div>
+        <div class="visualization-area">
+            [Lorenz Curve Visualization]
+        </div>
         <div class="figure-description">Lorenz curve for Dymension validators showing concentration patterns similar to other emerging networks.</div>
-        <figcaption>Figure 10: Dymension's reward distribution demonstrates that inequality emerges early in network development.</figcaption>
     </figure>
+    <figcaption>Figure 10: Dymension's reward distribution demonstrates that inequality emerges early in network development.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 11: Pareto Chart - Dymension Top Validators by Reward Share</div>
+        <div class="visualization-area">
+            [Pareto Chart Visualization]
+        </div>
         <div class="figure-description">Pareto analysis showing concentration among early validator entrants in the Dymension network.</div>
-        <figcaption>Figure 11: Early-mover advantages evident in Dymension's validator reward distribution.</figcaption>
     </figure>
+    <figcaption>Figure 11: Early-mover advantages evident in Dymension's validator reward distribution.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 12: Quintile Transition Matrix - Dymension Validator Mobility</div>
+        <div class="visualization-area">
+            [Transition Matrix Visualization]
+        </div>
         <div class="figure-description">Transition matrix for Dymension showing evolving mobility patterns in a young network.</div>
-        <figcaption>Figure 12: Dymension validator mobility patterns suggest early stratification despite network youth.</figcaption>
     </figure>
+    <figcaption>Figure 12: Dymension validator mobility patterns suggest early stratification despite network youth.</figcaption>
 
     <article class="two-column">
         <p>
@@ -832,21 +899,30 @@
     <!-- Figures 13-15 Placeholders -->
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 13: Lorenz Curve - dYdX Combined Validator Rewards</div>
+        <div class="visualization-area">
+            [Lorenz Curve Visualization]
+        </div>
         <div class="figure-description">Lorenz curve for dYdX validators showing aggregate rewards across native tokens and USDC trading fees.</div>
-        <figcaption>Figure 13: dYdX's dual-reward structure exhibits high concentration, particularly in USDC trading fee distribution.</figcaption>
     </figure>
+    <figcaption>Figure 13: dYdX's dual-reward structure exhibits high concentration, particularly in USDC trading fee distribution.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 14: Pareto Chart - dYdX Validators by Combined Reward Share</div>
+        <div class="visualization-area">
+            [Pareto Chart Visualization]
+        </div>
         <div class="figure-description">Pareto analysis of total validator compensation including both reward types.</div>
-        <figcaption>Figure 14: Combined reward analysis reveals amplified concentration effects from dual-token structure.</figcaption>
     </figure>
+    <figcaption>Figure 14: Combined reward analysis reveals amplified concentration effects from dual-token structure.</figcaption>
 
     <figure class="figure-placeholder">
         <div class="figure-title">Figure 15: Quintile Transition Matrix - dYdX Validator Mobility</div>
+        <div class="visualization-area">
+            [Transition Matrix Visualization]
+        </div>
         <div class="figure-description">Transition matrix tracking validator movements across reward quintiles in dYdX's dual-reward system.</div>
-        <figcaption>Figure 15: dYdX validator mobility constrained by advantages in both native token and USDC reward streams.</figcaption>
     </figure>
+    <figcaption>Figure 15: dYdX validator mobility constrained by advantages in both native token and USDC reward streams.</figcaption>
 
     <article class="two-column">
         <p>
